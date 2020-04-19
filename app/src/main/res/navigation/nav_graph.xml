@@ -16,5 +16,18 @@
         android:id="@+id/userDisplayFragment"
         android:name="com.example.savingusersdatabase.displayer.UserDisplayFragment"
         tools:layout="@layout/fragment_user_displayer"
-        android:label="UserDisplayFragment" />
+        android:label="UserDisplayFragment" >
+        <action
+            android:id="@+id/action_userDisplayFragment_to_detailUserFragment"
+            app:destination="@id/detailUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailUserFragment"
+        android:name="com.example.savingusersdatabase.userdetail.DetailUserFragment"
+        tools:layout="@layout/fragment_detail_user"
+        android:label="DetailUserFragment" >
+        <argument
+            android:name="userSelected"
+            app:argType="com.example.savingusersdatabase.User" />
+    </fragment>
 </navigation>
