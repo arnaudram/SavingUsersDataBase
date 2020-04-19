@@ -7,7 +7,9 @@ import androidx.lifecycle.MutableLiveData
 import kotlinx.coroutines.*
 
 class CreateUserViewModel(application: Application) :AndroidViewModel(application) {
-    private val userDao:UserDao
+
+    private val userDao:UserDao = SingleDatabase.getSingleInstance(application.applicationContext).userDao
+
 
     private var _eventInsert=MutableLiveData<Boolean>()
            val eventInsert:LiveData<Boolean>
@@ -16,8 +18,8 @@ class CreateUserViewModel(application: Application) :AndroidViewModel(applicatio
   private  val viewModelJob= Job()
   private  val uiScope= CoroutineScope(Dispatchers.Main + viewModelJob)
     init {
-        userDao=SingleDatabase.getSingleInstance(application.applicationContext).userDao
         _eventInsert.value=false
+
     }
 
   // fun to listen when user tap insert button

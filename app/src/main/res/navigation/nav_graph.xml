@@ -2,10 +2,19 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/createUserFragment2">
+    app:startDestination="@id/createUserFragment">
     <fragment
-        android:id="@+id/createUserFragment2"
+        android:id="@+id/createUserFragment"
         android:name="com.example.savingusersdatabase.CreateUserFragment"
         tools:layout="@layout/fragment_creation"
-        android:label="CreateUserFragment" />
+        android:label="CreateUserFragment" >
+        <action
+            android:id="@+id/action_createUserFragment_to_userDisplayFragment"
+            app:destination="@id/userDisplayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userDisplayFragment"
+        android:name="com.example.savingusersdatabase.displayer.UserDisplayFragment"
+        tools:layout="@layout/fragment_user_displayer"
+        android:label="UserDisplayFragment" />
 </navigation>

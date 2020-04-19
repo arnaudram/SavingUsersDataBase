@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.example.savingusersdatabase.databinding.FragmentCreationBinding
 import com.google.android.material.snackbar.Snackbar
 
@@ -40,6 +41,8 @@ class CreateUserFragment : Fragment() {
                            binding.editText.editableText.clear()
                           binding.email.editableText.clear()
                           Toast.makeText(application.applicationContext,"Item successfully inserted",Toast.LENGTH_SHORT).show()
+                          // navigate to UserDisplayFragment
+                          this.findNavController().navigate(CreateUserFragmentDirections.actionCreateUserFragmentToUserDisplayFragment())
                           createUserViewModel.onInsertcomplete()
                       }
                     else{
@@ -49,6 +52,7 @@ class CreateUserFragment : Fragment() {
                 }
 
         })
+
 
         return binding.root
     }
