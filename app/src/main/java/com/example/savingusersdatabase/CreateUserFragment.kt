@@ -38,8 +38,8 @@ class CreateUserFragment : Fragment() {
                           val newUser=User(name=name,email = email)
                           createUserViewModel.insertUser(newUser)
 
-                           binding.editText.editableText.clear()
-                          binding.email.editableText.clear()
+                          /* binding.editText.setText("")
+                          binding.email.setText("")*/
                           Toast.makeText(application.applicationContext,"Item successfully inserted",Toast.LENGTH_SHORT).show()
                           // navigate to UserDisplayFragment
                           this.findNavController().navigate(CreateUserFragmentDirections.actionCreateUserFragmentToUserDisplayFragment())

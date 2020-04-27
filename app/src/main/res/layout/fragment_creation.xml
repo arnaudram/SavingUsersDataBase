@@ -24,6 +24,7 @@
             android:inputType="textPersonName"
             tools:text="Name"
             android:hint="Name"
+
             app:layout_constraintEnd_toEndOf="@+id/email"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/email"
