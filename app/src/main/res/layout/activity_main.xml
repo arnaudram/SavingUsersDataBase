@@ -8,7 +8,7 @@
         tools:openDrawer="left"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fitsSystemWindows="true">
+        android:fitsSystemWindows="false">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -33,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="start"
-            android:fitsSystemWindows="true"
+            android:fitsSystemWindows="false"
             app:menu="@menu/menu_drawer"
 
             app:headerLayout="@layout/header_drawer">
